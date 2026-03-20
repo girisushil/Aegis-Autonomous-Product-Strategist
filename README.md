@@ -21,7 +21,7 @@ $$D = 1 - \frac{\text{Aligned Features}}{\text{Market Velocity}}$$
 ### 1. Autonomous Multi-Agent Pipeline
 Aegis operates via a sequential, stateful pipeline that handles the full intelligence lifecycle:
 - **Scout**: Continuous monitoring of RSS, NewsAPI, LinkedIn, and G2 competitive signals.
-- **Analyst**: Real-time telemetry analysis using **Supabase** to calculate **ARR at Risk**.
+- **Analyst**: Real-time telemetry analysis using a **Cloud-Hosted Supabase (PostgreSQL)** instance. It queries over **3 Million+ rows** of user events to calculate **ARR at Risk** with sub-second latency.
 - **Strategist**: A **Simulation Lab** where AI personas (Optimist vs. Skeptic) debate historical precedents and determine the optimal pivot strategy.
 - **Remediation**: Automated execution of the chosen strategy across your technical stack.
 
@@ -43,7 +43,7 @@ Once a consensus is reached, Aegis autonomously:
 - **Core Reasoning**: Google Gemini (via `google-genai`).
 - **Backend**: FastAPI with asynchronous WebSocket streaming.
 - **Frontend**: React + TypeScript + Vite, featuring a terminal-style real-time log.
-- **Data & Auth**: Supabase (PostgreSQL), Redis.
+- **Data & Auth**: **Cloud-Hosted Supabase** (PostgreSQL) managing **3M+ Telemetry Rows**, Redis.
 - **Integrations**: Slack SDK, Notion API, Linear GraphQL.
 - **Infrastructure**: Docker & Ngrok for secure local-to-cloud exposure.
 
