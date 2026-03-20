@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  frontend:
+    # Simulates React/Next.js/Vite environment boundary
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    # Simulates FastAPI AI Orchestrator boundary
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env.template
+    depends_on:
+      - postgres
+
+  postgres:
+    image: ankane/pgvector:latest
+    environment:
+      POSTGRES_USER: aegis_user
+      POSTGRES_PASSWORD: aegis_password
+      POSTGRES_DB: aegis_telemetry
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"

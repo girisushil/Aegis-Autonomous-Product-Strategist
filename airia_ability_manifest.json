@@ -1,0 +1,14 @@
+{
+  "tools": [
+    {
+      "name": "trigger_war_room",
+      "description": "Initiates the Aegis Strategic War Room to detect market drift and propose a defensive pivot based on real-time telemetry and competitive signals.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "endpoint": "[YOUR_RENDER_URL]/airia/trigger-war-room"
+    }
+  ]
+}

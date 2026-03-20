@@ -1,0 +1,12 @@
+{
+  "competitors": [
+    {
+      "name": "Competitor Alpha",
+      "url": "https://example.com"
+    },
+    {
+      "name": "Competitor Beta",
+      "url": "https://example.org"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+psycopg2-binary
+requests
+python-dotenv
+pandas
+python-multipart
+notion-client
+beautifulsoup4
+tenacity
+mcp

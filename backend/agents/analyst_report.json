@@ -1,0 +1,8 @@
+{
+  "signal_id": 1,
+  "signal_url": "https://example.com",
+  "impact_feature_category": "dashboard_widgets",
+  "impact_active_users": 8300,
+  "risk_score": 83,
+  "analysis_summary": "Detected change in competitor https://example.com. Overlaps with our feature 'dashboard_widgets' which has 8300 active users. Calculated competitive risk score is 83/100."
+}
